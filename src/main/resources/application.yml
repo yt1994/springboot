@@ -1,0 +1,23 @@
+server:
+  port: 80
+  error:
+    path: /error
+user:
+  age: 100
+  userName: 测试名称
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://47.94.46.96/mdy_commerce4?characterEncoding=utf8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml  #配置这个也可 在mapper接口中直接写sql也可 两者同事兼容
+  configuration: #mybatis全局配置文件中的配置属性
+    map-underscore-to-camel-case: true
